@@ -1,0 +1,1 @@
+import axios from 'axios'; const client=axios.create({ baseURL:'/api' }); client.interceptors.request.use(cfg=>{ const t=localStorage.getItem('jwt'); if(t) cfg.headers['Authorization']=`Bearer ${t}`; return cfg; }); export default client;

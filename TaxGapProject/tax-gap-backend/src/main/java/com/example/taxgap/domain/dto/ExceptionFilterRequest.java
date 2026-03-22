@@ -1,0 +1,2 @@
+
+package com.example.taxgap.domain.dto; public class ExceptionFilterRequest { private String customerId; private String severity; private String ruleName; public String getCustomerId(){return customerId;} public void setCustomerId(String v){customerId=v;} public String getSeverity(){return severity;} public void setSeverity(String v){severity=v;} public String getRuleName(){return ruleName;} public void setRuleName(String v){ruleName=v;} }

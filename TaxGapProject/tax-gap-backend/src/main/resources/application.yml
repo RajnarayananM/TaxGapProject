@@ -1,0 +1,28 @@
+
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/taxgap?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql
+security:
+  jwt:
+    secret: "replace_with_strong_32+_char_secret_key_replace_with_strong_32+_char_secret_key"
+    expiryMinutes: 120
+logging:
+  level:
+    root: INFO
+    com.example.taxgap: DEBUG

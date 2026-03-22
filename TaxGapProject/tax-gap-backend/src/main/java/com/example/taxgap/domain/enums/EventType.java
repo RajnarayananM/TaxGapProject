@@ -1,0 +1,1 @@
+package com.example.taxgap.domain.enums; public enum EventType { INGESTION, TAX_COMPUTATION, RULE_EXECUTION }

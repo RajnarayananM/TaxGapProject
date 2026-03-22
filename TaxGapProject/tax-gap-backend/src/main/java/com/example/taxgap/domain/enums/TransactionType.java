@@ -1,0 +1,1 @@
+package com.example.taxgap.domain.enums; public enum TransactionType { SALE, REFUND, EXPENSE }

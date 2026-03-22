@@ -1,0 +1,3 @@
+
+package com.example.taxgap.controller; import com.example.taxgap.domain.dto.*; import com.example.taxgap.service.TransactionService; import jakarta.validation.Valid; import org.springframework.http.ResponseEntity; import org.springframework.security.access.prepost.PreAuthorize; import org.springframework.web.bind.annotation.*;
+@RestController @RequestMapping("/api/transactions") public class TransactionController { private final TransactionService service; public TransactionController(TransactionService s){service=s;} @PostMapping("/upload") @PreAuthorize("hasAnyRole('ADMIN','AUDITOR')") public ResponseEntity<TransactionUploadResponse> upload(@RequestBody @Valid TransactionUploadRequest request){ return ResponseEntity.ok(service.upload(request)); } }
