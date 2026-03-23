@@ -169,15 +169,4 @@ GET /api/exceptions?customerId=CUST001&severity=HIGH&ruleName=HighValueTransacti
 
 ---
 
-## Quick Git Commands (to push this repo)
-
-```bash
-# from project root where backend/ and frontend/ exist
-git init
-git add .
-git commit -m "Initial commit: backend and frontend"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<your-repo>.git
-git push -u origin main
-```
 
